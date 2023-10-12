@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title" : "Total medals per year",
+    "width" : 750,
+    "height" : 500,
+    "data": {"url": "https://raw.githubusercontent.com/mintdaniel6/olympic/main/summer.csv"},
+    "transform": [
+        {
+            "lookup": "Country",
+            "from":{
+                "data":{
+                    "url":"https://raw.githubusercontent.com/mintdaniel6/olympic/main/dictionary.csv",
+                    "format":{"type": "csv"}
+                },
+                "key":"Code",
+                "fields": ["Country","GDP per Capita","Population"]
+            }
+        }
+    ],
+    "mark":"point",
+    "encoding": {
+        "x":{"field":"Year","type": "ordinal"},
+        "y":{"aggregate":"count","type": "quantitative","title":"Total medals"},
+        "tooltip":[
+            {"field":"Country","type": "nominal","title":"Country"},
+            {"aggregate":"count","type": "quantitative","title":"Total medals"}
+        ]
+    }
+}
