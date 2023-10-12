@@ -1,0 +1,35 @@
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    color: #ff0000;
+}
+
+
+
+.highlight {
+    font-weight: 700; 
+    color: rgb(196, 113, 13); 
+}
+
+
+
+.page {
+    width: 950px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 50px;
+    padding-top: 50px;
+}
+
+.vis-container {
+    width: 100%;
+}
+
+
+
+.pure-g {
+    margin-bottom: 40px;
+}
