@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title" : "Summer gold medals",
-    "width" : 750,
-    "height" : 500,
+    "width" : 200,
+    "height" : 200,
     "projection": {"type":"equalEarth"},
     "data": {
     "url": "https://raw.githubusercontent.com/mintdaniel6/olympic/main/ne_110m.json",
