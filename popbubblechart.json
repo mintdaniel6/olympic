@@ -1,9 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title" : "Winter gold medals",
-    "width" : "container",
+    "width" : 750,
     "height" : 500,
     "data": {"url": "https://raw.githubusercontent.com/mintdaniel6/olympic/main/olympics_medals_country_wise.csv"},
+    "params": [{
+    "name": "grid",
+    "select": "interval",
+    "bind": "scales"
+    }],
     "transform": [
         {
             "lookup": "Country",
@@ -25,7 +30,8 @@
         "tooltip":[
             {"field":"Country","type": "nominal","title":"Country"},
             {"field":"total_total","type": "quantitative","title":"Total medals"},
-            {"field":"Population","type": "quantitative","title":"Population"}
+            {"field":"Population","type": "quantitative","title":"Population"},
+            {"field":"GDP per Capita","type": "quantitative","title":"GDP Per Capita","format":".0f"}
         ]
     }
 }
