@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Medal distribution of top 10 countries",
+    "width": 750,
+    "height": 500,
+    "data": {
+      "url": "https://raw.githubusercontent.com/mintdaniel6/olympic/main/olympics_medals_country_wise.csv"
+    },
+    "transform": [
+      
+      {
+        "aggregate": [
+          { "op": "sum", "field": "total_gold", "as": "total_gold" },
+          { "op": "sum", "field": "total_silver", "as": "total_silver" },
+          { "op": "sum", "field": "total_bronze", "as": "total_bronze" }
+        ],
+        "groupby": ["Country"]
+      },
+      {
+        "calculate": "datum.total_gold + datum.total_silver + datum.total_bronze",
+        "as": "total_total"
+      },
+      {
+        "window": [{ "op": "rank", "as": "rank" }],
+        "sort": [{ "field": "total_total", "order": "descending" }]
+      },
+      {
+        "filter": { "field": "rank", "lte": 10 }
+      },
+      {
+        "fold": ["total_gold","total_silver","total_bronze"],"as": ["medal_type","medal_count"]
+      }
+      
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": { "field": "Country", "type": "ordinal" },
+      "y": { "field": "medal_count", "type": "quantitative","title":"Total Medals" },
+      "color": {
+        "field": "medal_type",
+        "type": "nominal",
+        "scale": {"domain":["total_gold","total_silver","total_bronze"], "range": [ "Gold","Silver", "#CD7F32"]}
+      },
+      "tooltip": [
+        { "field": "Country", "type": "nominal", "title": "Country" },
+        { "field": "total_total", "type": "quantitative", "title": "Total Medals" },
+        { "field": "total_gold", "type": "quantitative", "title": "Gold Medals" },
+        { "field": "total_silver", "type": "quantitative", "title": "Silver Medals" },
+        { "field": "total_bronze", "type": "quantitative", "title": "Bronze Medals" }
+      ]
+    }
+  }
