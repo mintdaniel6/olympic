@@ -10,14 +10,14 @@
       
       {
         "aggregate": [
-          { "op": "sum", "field": "total_gold", "as": "total_gold" },
-          { "op": "sum", "field": "total_silver", "as": "total_silver" },
-          { "op": "sum", "field": "total_bronze", "as": "total_bronze" }
+          { "op": "sum", "field": "total_gold", "as": "Gold" },
+          { "op": "sum", "field": "total_silver", "as": "Silver" },
+          { "op": "sum", "field": "total_bronze", "as": "Bronze" }
         ],
         "groupby": ["Country"]
       },
       {
-        "calculate": "datum.total_gold + datum.total_silver + datum.total_bronze",
+        "calculate": "datum.Gold + datum.Silver + datum.Bronze",
         "as": "total_total"
       },
       {
@@ -28,7 +28,7 @@
         "filter": { "field": "rank", "lte": 10 }
       },
       {
-        "fold": ["total_gold","total_silver","total_bronze"],"as": ["medal_type","medal_count"]
+        "fold": ["Gold","Silver","Bronze"],"as": ["medal_type","medal_count"]
       }
       
     ],
@@ -39,14 +39,15 @@
       "color": {
         "field": "medal_type",
         "type": "nominal",
-        "scale": {"domain":["total_gold","total_silver","total_bronze"], "range": [ "Gold","Silver", "#CD7F32"]}
+        "scale": {"domain":["Gold","Silver","Bronze"], "range": [ "Gold","Silver", "#CD7F32"]},
+        "title":"Medal type"
       },
       "tooltip": [
         { "field": "Country", "type": "nominal", "title": "Country" },
         { "field": "total_total", "type": "quantitative", "title": "Total Medals" },
-        { "field": "total_gold", "type": "quantitative", "title": "Gold Medals" },
-        { "field": "total_silver", "type": "quantitative", "title": "Silver Medals" },
-        { "field": "total_bronze", "type": "quantitative", "title": "Bronze Medals" }
+        { "field": "Gold", "type": "quantitative", "title": "Gold Medals" },
+        { "field": "Silver", "type": "quantitative", "title": "Silver Medals" },
+        { "field": "Bronze", "type": "quantitative", "title": "Bronze Medals" }
       ]
     }
   }
