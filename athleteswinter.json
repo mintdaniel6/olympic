@@ -11,7 +11,7 @@
         "aggregate": [
           {"op":"count","as":"TotalMedals"}
         ],
-        "groupby": ["Athlete","Country"]
+        "groupby": ["Athlete","Country","Sport"]
       },
       {
         "window": [{"op":"rank","as":"rank"}],
