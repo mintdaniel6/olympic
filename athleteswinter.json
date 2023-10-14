@@ -47,7 +47,8 @@
         "field": "Country",
         "type": "nominal",
         "scale": {
-          "domain": ["United States of America", "Germany","East Germany","Norway","Italy","Soviet Union","Sweden"]
+          "domain": ["Norway","United States of America","East Germany","Germany","Italy","Soviet Union","Sweden"],
+          "range":["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f"],
         }
       },
       "tooltip": [
