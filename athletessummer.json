@@ -11,7 +11,7 @@
         "aggregate": [
           {"op":"count","as":"TotalMedals"}
         ],
-        "groupby": ["Athlete","Country"]
+        "groupby": ["Athlete","Country","Sport"]
       },
       {
         "window": [{"op":"rank","as":"rank"}],
@@ -52,6 +52,7 @@
       },
       "tooltip": [
         { "field": "Athlete", "type": "nominal", "title": "Name" },
+                { "field": "Sport", "type": "nominal", "title": "Sport" },
         { "field": "Country", "type": "nominal", "title": "Country" },
         { "field": "TotalMedals", "type": "quantitative", "title": "Total Medals" }
       ]
