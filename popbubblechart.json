@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title" : { "text":"Population vs GDP per Capita","fontSize":20},
+    "title" : { "text":"Figure 4: Population vs GDP per Capita","fontSize":20},
     "width" : "container",
     "height" : 500,
     "data": {"url": "https://raw.githubusercontent.com/mintdaniel6/olympic/main/olympics_medals_country_wise.csv"},
