@@ -20,6 +20,9 @@
                 "key":"Country",
                 "fields": ["GDP per Capita","Population"]
             }
+        },
+        {
+          "filter":{"field": "GDP per Capita","gt":0}
         }
     ],
     "mark":"point",
