@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title" : "Winter gold medals",
+    "title" : "Figure 3: Winter gold medals",
     "width" : "container",
     "height" : 200,
     "projection": {"type":"equalEarth"},
