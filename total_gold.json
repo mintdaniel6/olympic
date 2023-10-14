@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title" : "Total gold medals",
+    "title" : {"text":"Total gold medals","fontSize":20},
     "width" : "container",
     "height" : 500,
     "projection": {"type":"orthographic","rotate":{"expr": "[Angle,0,0]"}},
