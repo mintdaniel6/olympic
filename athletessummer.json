@@ -3,7 +3,6 @@
     "title":"Top 15 Summer Athletes of all time",
     "width":"container",
     "height":400,
-    "background":"lightgray",
     "data": {
       "url": "https://raw.githubusercontent.com/mintdaniel6/olympic/main/summer.csv"
     },
