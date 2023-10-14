@@ -10,14 +10,14 @@
       
       {
         "aggregate": [
-          { "op": "sum", "field": "total_gold", "as": "Gold" },
-          { "op": "sum", "field": "total_silver", "as": "Silver" },
-          { "op": "sum", "field": "total_bronze", "as": "Bronze" }
+          { "op": "sum", "field": "total_gold", "as": "aGold" },
+          { "op": "sum", "field": "total_silver", "as": "bSilver" },
+          { "op": "sum", "field": "total_bronze", "as": "cBronze" }
         ],
         "groupby": ["Country"]
       },
       {
-        "calculate": "datum.Gold + datum.Silver + datum.Bronze",
+        "calculate": "datum.aGold + datum.bSilver + datum.cBronze",
         "as": "total_total"
       },
       {
@@ -28,7 +28,7 @@
         "filter": { "field": "rank", "lte": 10 }
       },
       {
-        "fold": ["Gold","Silver","Bronze"],"as": ["medal_type","medal_count"]
+        "fold": ["aGold","bSilver","cBronze"],"as": ["medal_type","medal_count"]
       }
       
     ],
@@ -39,15 +39,16 @@
       "color": {
         "field": "medal_type",
         "type": "nominal",
-        "scale": {"domain":["Gold","Silver","Bronze"], "range": [ "Gold","Silver", "#CD7F32"]},
-        "title":"Medal type"
+        "scale": {"domain":["aGold","bSilver","cBronze"], "range": [ "Gold","Silver", "#CD7F32"]},
+        "legend":null
+
       },
       "tooltip": [
         { "field": "Country", "type": "nominal", "title": "Country" },
         { "field": "total_total", "type": "quantitative", "title": "Total Medals" },
-        { "field": "Gold", "type": "quantitative", "title": "Gold Medals" },
-        { "field": "Silver", "type": "quantitative", "title": "Silver Medals" },
-        { "field": "Bronze", "type": "quantitative", "title": "Bronze Medals" }
+        { "field": "aGold", "type": "quantitative", "title": "Gold Medals" },
+        { "field": "bSilver", "type": "quantitative", "title": "Silver Medals" },
+        { "field": "cBronze", "type": "quantitative", "title": "Bronze Medals" }
       ]
     }
   }
