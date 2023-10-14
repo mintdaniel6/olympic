@@ -48,7 +48,7 @@
         "field": "Country",
         "type": "nominal",
         "scale": {
-          "domain": ["United States of America", "Soviet Union", "Finland","Russia","Italy","Japan"]
+          "domain": ["United States of America", "Soviet Union", "Finland","Russia","Italy","Japan","Czechoslovakia"]
         },
       },
       "tooltip": [
