@@ -51,6 +51,7 @@
         }
       },
       "tooltip": [
+        { "field": "Athlete", "type": "nominal", "title": "Name" },
         { "field": "Country", "type": "nominal", "title": "Country" },
         { "field": "TotalMedals", "type": "quantitative", "title": "Total Medals" }
       ]
