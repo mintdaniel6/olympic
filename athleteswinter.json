@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title":"Top 15 Winter Athletes of all time",
+    "title":{"text":"Figure 7: Top 15 Winter Athletes of all time","fontSize":15"},
     "width":"container",
     "height":500,
     "data": {
