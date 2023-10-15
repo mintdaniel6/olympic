@@ -3,33 +3,49 @@ body *{
 }
 
 h1 {
-    font-weight: 700;
-    color: #ff0000;
+    font-weight: 900;
+    color: goldenrod;
+    text-align: center;
 }
-
-
-
-.highlight {
-    font-weight: 700; 
-    color: rgb(196, 113, 13); 
-}
-
 
 
 .page {
-    width: 950px;
-    background-color: rgb(255, 255, 255);
+    width: 1400px;
+    background-color: lightcyan;
     margin: auto;
-    padding: 50px;
-    padding-top: 50px;
+    padding: 25px;
+    padding-top: 25px;
 }
 
 .vis-container {
     width: 100%;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 5px;
+    background-color: white;
 }
 
-
+.gap{
+    padding-left: 250px;
+}
 
 .pure-g {
     margin-bottom: 40px;
+}
+
+.text {
+    width: 100%;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 5px;
+    background-color: white;
+    text-align: center;
+}
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.p3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
