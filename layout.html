@@ -2,12 +2,18 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>FIT3179 Data Visualization Project 2 by Daniel Mint</title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <!-- Import pure.css -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="layout.css">
     
@@ -17,7 +23,9 @@
 <div class="page">
   <div class="pure-g">
     <div class="pure-u-1-1">
-      <h1>Olympic games 1896-2012</h1>
+      <div class="h1">
+        <h1>OLYMPIC GAMES FROM 1896-2014</h1>
+      </div>
     </div>
   </div>
   <div class="pure-g">
@@ -27,8 +35,10 @@
           It alternates between the <b>Summer</b> and <b>Winter</b> games and is regarded as one of the most prestigious global athletic
           competitions. Its roots trace back to ancient Greece, with the first <b>Olympic Games</b> taking place in Olympia in 776 BC. 
           In the modern era, the <b>Olympic Games</b> include a wide array of sports and disciplines, ranging from track and field to 
-          swimming, gymnastics, ball sports and much more. Beyond athletic achievement, the <b>Olympic Games</b> serve as a platform for
-          athletes to demonstrate their skills on a worldwide scale, and represent their home country against the world.</p>
+          swimming, gymnastics, ball sports and much more. Ranking the top 3 contender/s with a <span style="color:gold">Gold</span> medal,
+           <span style="color:silver">Silver</span> medal and <span style="color:#CD7F32">Bronze</span> medal.
+          Beyond athletic achievement, the <b>Olympic Games</b> serve as a platform for athletes to demonstrate their skills on a worldwide
+          scale, and represent their home country against the world.</p>
       </div>
     </div>
   </div>
@@ -42,12 +52,20 @@
     <div class="pure-u-1-24"></div>
     <div class="pure-u-5-24">
       <div class="text">
-        <p class="p2"><br>As shown in the interactive map <b>Figure 1</b>, the medal distribution spread far and wide.
-          The <b>United states of America</b> is shown to have won the most Gold Medals with a staggering <b>1173</b> Medals.
+        <p class="p2">As shown in the interactive map Figure 1, the medal distribution spread far and wide.
+          The <b>United states of America</b> is shown to have won the most <span style="color:gold">Gold</span> Medals with a staggering <b>1173</b> Medals.
           <b>Germany</b> comes in second with the <b>United Kingdom</b>, <b>China</b>,<b> France</b> and <b>Italy</b> not too
-          far behind. <br> <br> <b>Figure 2</b> below shows the medal distribution of just the summer olympics. Again the<b> United states
-          of America</b> is leading in gold medals for the summer olympics. However as shown <b>Figure 3</b>, while the <b> United states
-          of America</b> is still a close second, <b>Norway</b> leads the way in winter olympic gold medals with <b>148</b> medals. </p>
+          far behind. <br> <br> Figure 2 below shows the medal distribution of just the summer olympics. Again the<b> United states
+          of America</b> is leading in <span style="color:gold">Gold</span> medals for the summer olympics. However as shown Figure 3, while the <b> United states
+          of America</b> is still a close second, <b>Norway</b> leads the way in winter olympic <span style="color:gold">Gold</span> medals with <b>148</b> medals. </p>
+      </div>
+    </div>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <div class="text">
+        <p class="p2"><b>Note:</b> Some countries that participated in the earlier years will not have a location on
+          the maps in Figures 1, 2 and 3 due to the country's no longer existing, such as the Soviet Union and Czechoslovakia.</p>
       </div>
     </div>
   </div>
@@ -66,21 +84,21 @@
     </div>
   </div>
   <div class="pure-g">
-    <div class="pure-u-19-24">
-      <div id="bub" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
-        
-        <form class="vega-bindings"></form>
-      </div>
-    </div>
-    <div class="pure-u-1-24">
-    </div>
-    <div class="pure-u-4-24">
+    <div class="pure-u-1-1">
       <div class="text">
         <p class="p2"> Figure 4 shows the distribution of olympic medals with comparison to the country's <b>Population</b> and
-          <b>GDP per Capita</b>. The <b>United States</b> is shown to have the best of both worlds a considerable <b>Population</b> (3rd highest)
-           along with a considerable <b>GPD per Capiita</b> (6th highest). However, <b>Luxembourg</b> shows that a high <b>GDP per Capita</b> 
-           doesn't guarantee medals with a measly <b>5</b>.
+          <b>GDP per Capita</b>. The <b>United States</b> is shown to have the best of both worlds, a considerable <b>Population</b> (3rd highest)
+           along with a considerable <b>GPD per Capita</b> (6th highest). However, <b>Luxembourg</b> shows that a high <b>GDP per Capita</b> 
+           doesn't guarantee medals with only <b>5</b> medals. <b>India</b> also shows that a high <b>Population</b> does not necessarily mean
+           they perform well in the <b>Olympics</b> with only <b>35</b> total medals.
         </p>
+      </div>
+    </div>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <div id="bub" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
+        <form class="vega-bindings"></form>
       </div>
     </div>
   </div>
@@ -93,31 +111,54 @@
     </div>
   </div>
   <div class="pure-g">
-    <div class="pure-u-2-3">
+    <div class="pure-u-18-24">
       <div id="stack" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
         <form class="vega-bindings"></form>
       </div>
     </div>
     <div class="pure-u-1-24"></div>
-    <div class="pure-u-7-24">
+    <div class="pure-u-5-24">
       <div class="text">
-        <p>wdadwad</p>
+        <p class = "p2">
+          Figure 5 again shows the <b>USA</b>'s domination with <b>2959</b> total <b>Olympic</b> medals. Comprising of:
+          <b>1173</b> <span style="color:gold">Gold</span> medals,
+          <b>953</b> <span style="color:silver">Silver</span> medals, and 
+         <b>833</b> <span style="color:#CD7F32">Bronze</span> medals.
+            This chart however does include the <b>Soviet Union</b> which participated in the <b>Olympics</b> from 
+            <b>1952</b> to  <b>1988</b>. Obtaining a total of <b>1204</b> <b>Olympic</b> medals. Consisting of:
+          <b>473</b> <span style="color:gold">Gold</span> medals,
+           <b>376</b> <span style="color:silver">Silver</span> medals, and 
+          <b>355</b> <span style="color:#CD7F32">Bronze</span> medals. It is a lot closer between then next three 
+          and is debatable to which would be the 3rd most successful country as the <b>United Kingdom</b> boasts a total of <b>950</b> medals 
+          which is the next highest, however <b>Germany</b> has accrued more <span style="color:gold">Gold</span> medals sitting
+          at <b>305</b> <span style="color:gold">Gold</span> medals compared to the <b>United Kingdom</b>'s <b>296</b> 
+          <span style="color:gold">Gold</span> medals. Making them arguably the third most successful country at the <b>Olympic Games</b>.
+        </p>
       </div>
     </div>
   </div>
   <div class="pure-g">
-    <div class="pure-u-7-24">
+    <div class="pure-u-5-24">
       <div class="text">
-        <p class="p2"><br>As shown in the interactive map <b>Figure 1</b>, the medal distribution spread far and wide.
-          The <b>United states of America</b> is shown to have won the most Gold Medals with a staggering <b>1173</b> Medals.
-          <b>Germany</b> comes in second with the <b>United Kingdom</b>, <b>China</b>,<b> France</b> and <b>Italy</b> not too
-          far behind. <br> <br> <b>Figure 2</b> below shows the medal distribution of just the summer olympics. Again the<b> United states
-          of America</b> is leading in gold medals for the summer olympics. However as shown <b>Figure 3</b>, while the <b> United states
-          of America</b> is still a close second, <b>Norway</b> leads the way in winter olympic gold medals with <b>148</b> medals. </p>
+        <p class="p2"><br>
+          Figure 6 shows the top performing athletes throughout the history of the <b>Summer Olympic Games</b>. With a staggering
+          <b>22</b> <b>Olympic</b> medals, <b>Michael Phelps</b> leads the <b>Olympics</b> with most medals by a <b>singular</b> athlete. 
+          Adding another <span style="color:#1f78b4"><b>22</b></span> to the <span style="color:#1f78b4"><b>USA</b></span>'s already high count from the <b>Aquatic</b> discipline.
+          Coming in second and third
+          , providing a combined <span style="color:#b2df8a"><b>33</b></span> <b>Olympic</b> medals for the <span style="color:#b2df8a"><b>Soviet Union</b></span>, is
+           <b>Larisa Latynina</b> and <b>Nikolay Andrianov</b>. Achieving <span style="color:#b2df8a"><b>18</b></span> and <span style="color:#b2df8a"><b>15</b></span> <b>Olympic</b>
+            medals respectively both from within the <b>Gymnastics</b> discipline. <br><br>
+           <span style="color:#1f78b4"><b>USA</b></span> has <span style="color:#1f78b4"><b>8</b></span> athletes in the <b>top 15</b> totalling <span style="color:#1f78b4"><b>102</b></span> medals. The 
+           <span style="color:#b2df8a"><b>Soviet Union</b></span> has <span style="color:#b2df8a"><b>4</b></span> totalling <span style="color:#b2df8a"><b>47</b></span> medals. 
+           <span style="color:#e31a1c"><b>Japan</b></span> has <span style="color:#e31a1c"><b>2</b></span> totalling <span style="color:#e31a1c"><b>25</b></span> medals. Finally <span style="color:#33a02c"><b>Italy</b></span>,
+           <span style="color:#fb9a99"><b>Russia</b></span>, <span style="color:#a6cee3"><b>Finland</b></span> and <span style="color:#fdbf6f"><b>Czechoslovakia</b></span>
+           all with <b>1</b> athlete bringing in <span style="color:#33a02c"><b>13</b></span>, <span style="color:#fb9a99"><b>12</b></span>
+           , <span style="color:#a6cee3"><b>12</b></span> and <span style="color:#fdbf6f"><b>11</b></span> medals respectively.
+          </p>
       </div>
     </div>
     <div class="pure-u-1-24"></div>
-    <div class="pure-u-2-3">
+    <div class="pure-u-18-24">
       <div id="athsum" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
         <canvas width="1330" height="679" class="marks"></canvas>
         <form class="vega-bindings"></form>
@@ -125,21 +166,47 @@
     </div>
   </div>
   <div class="pure-g">
-    <div class="pure-u-2-3">
+    <div class="pure-u-1-1">
+      <div class="text">
+        <p class="p2"><b>Note:</b> Figure 6 shows the top 15 <b>Olympic</b> athletes, however due to ties in the medal count, there are <b>18</b> athletes. </p>
+      </div>
+    </div>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-18-24">
       <div id="athwin" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
         <canvas width="1330" height="679" class="marks"></canvas>
         <form class="vega-bindings"></form>
       </div>
     </div>
     <div class="pure-u-1-24"></div>
-    <div class="pure-u-7-24">
+    <div class="pure-u-5-24">
       <div class="text">
-        <p class="p2"><br>As shown in the interactive map <b>Figure 1</b>, the medal distribution spread far and wide.
-          The <b>United states of America</b> is shown to have won the most Gold Medals with a staggering <b>1173</b> Medals.
-          <b>Germany</b> comes in second with the <b>United Kingdom</b>, <b>China</b>,<b> France</b> and <b>Italy</b> not too
-          far behind. <br> <br> <b>Figure 2</b> below shows the medal distribution of just the summer olympics. Again the<b> United states
-          of America</b> is leading in gold medals for the summer olympics. However as shown <b>Figure 3</b>, while the <b> United states
-          of America</b> is still a close second, <b>Norway</b> leads the way in winter olympic gold medals with <b>148</b> medals. </p>
+        <p class="p2"><br>
+          Figure 7 shows the top performing athletes throughout the history of the <b>Winter Olympic Games</b>. With <span style="color:#a6cee3"><b>13</b></span> 
+          medals the <span style="color:#a6cee3"><b>Norwegian</b></span> <b>Ole Einar Bjoerndalen</b> holds the all time highest medal count for the <b>Winter Olympic Games</b>
+          all from the <b>Biathlon</b> discipline. Coming in second is fellow <span style="color:#a6cee3"><b>Norwegian</b></span> <b>Björn Daehlie</b> contributing
+          <span style="color:#a6cee3"><b>12</b></span> <b>Olympic</b> medals for <span style="color:#a6cee3"><b>Norway</b></span> from the <b>Skiing</b> discipline. Third goes to
+          the <span style="color:#33a02c"><b>Italian</b></span> <b>Stefania Belmondo</b> with <span style="color:#33a02c"><b>10</b></span> medals, again coming from the 
+          <b>Skiing</b> discipline. <br>
+          This time <span style="color:#e31a1c"><b>Germany</b></span> has the most athletes in the <b>top 15</b>, with <span style="color:#e31a1c"><b>5</b></span> totalling 
+          <span style="color:#e31a1c"><b>42</b></span> medals. <span style="color:#a6cee3"><b>Norway</b></span> has <span style="color:#a6cee3"><b>4</b></span> totalling 
+          also <span style="color:#a6cee3"><b>42</b></span> medals. The 
+          <span style="color:#b2df8a"><b>Soviet Union</b></span> has <span style="color:#b2df8a"><b>2</b></span> 
+          totalling <span style="color:#b2df8a"><b>17</b></span> medals. 
+          Finally <span style="color:#33a02c"><b>Italy</b></span>,
+          <span style="color:#fdbf6f"><b>Sweden</b></span>, <span style="color:#fb9a99"><b>East Germany</b></span> and <span style="color:#1f78b4"><b>USA</b></span>
+          all with <b>1</b> athlete bringing in <span style="color:#33a02c"><b>10</b></span>, <span style="color:#fdbf6f"><b>9</b></span>
+          , <span style="color:#fb9a99"><b>8</b></span> and <span style="color:#1f78b4"><b>8</b></span> medals respectively.
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <div class="text">
+        <p>FIT3179 Data Visualization Project 2 by Daniel Mint<br>Sources: kaggle.com | purecss.io | cdn.jsdelivr.net | olympics.com</p>
       </div>
     </div>
   </div>
